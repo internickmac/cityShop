@@ -11,6 +11,7 @@
 
 			<table class="table table-striped table-hover">
 				<tr>
+				    <th>Picture</th>
 					<th>Clave</th>
 					<th>Articulo</th>
 					<th>Description</th>
@@ -21,12 +22,13 @@
                 
                 <c:forEach items="${products}" var="product">
 				<tr>
-					<td>${product.productId}</td>
-					<td>${product.productName}</td>
-					<td>${product.productDescription}</td>
-					<td>${product.productPrice}</td>
-					<td>${product.productUnits}</td>
-					<td><a href= "<spring:url value="/productList/viewProduct/${product.productId}" />" >
+					<td><img alt="Picture" src="resources/img/${ product.productId}.png" style="width:100px; height:100px;"></td>
+					<td style="vertical-align:middle;">${product.productId}</td>
+					<td style="vertical-align:middle;">${product.productName}</td>
+					<td style="vertical-align:middle;">${product.productDescription}</td>
+					<td style="vertical-align:middle;">${product.productPrice}</td>
+					<td style="vertical-align:middle;">${product.productUnits}</td>
+					<td style="vertical-align:middle;"><a href= "<spring:url value="/productList/viewProduct/${product.productId}" />" >
 					    <span class="glyphicon glyphicon-asterisk"></span></a></td>
 				</tr>
 				</c:forEach>

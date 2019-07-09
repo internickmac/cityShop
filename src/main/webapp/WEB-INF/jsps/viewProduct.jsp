@@ -14,7 +14,8 @@
     <div class="container">
     	<div class="row">
     		<div class="col-md-5">
-    			<img alt="photo" src="#">
+    			<img alt="photo" src="${pageContext.request.contextPath}/resources/img/${product.productId}.png" 
+    			     class="img-responsive img-rounded">
     		</div>
     	
     	<div class="col-md-5">

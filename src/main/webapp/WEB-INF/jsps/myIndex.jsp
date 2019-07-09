@@ -50,6 +50,7 @@
                     <li><a href="#">One more separated link</a></li>
                   </ul>
                 </li>
+                <li><a href="<c:url value="/admin"/>">Admin</a></li>
               </ul>
             </div>
           </div>
