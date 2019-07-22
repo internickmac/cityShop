@@ -11,7 +11,7 @@
 		</div>
     </div>
     
-    <div class="container">
+    <div class="container" ng-app="cartApp">
     	<div class="row">
     		<div class="col-md-5">
     			<img alt="photo" src="${pageContext.request.contextPath}/resources/img/${product.productId}.png" 
@@ -24,6 +24,22 @@
     		<p><b>Descripcion: ${product.productDescription}</b></p>
     		<p>Precio: ${product.productPrice}</p>
     		<p>Unidades: ${product.productUnits}</p>
+    		
+    		<br/>
+	  		
+	  		<c:set var="role" scope="page" value="${param.role}"/>
+			<c:set var="url" scope="page" value="/productList"/>
+			<c:if test="${role=='admin'}">
+				<c:set var="url" scope="page" value="/productInventory"/>
+			</c:if>   		
+					
+			<p ng-controller="cartCtrl">
+				<a href="#" ng-click="testCart()" class="btn btn-warning">Test Angular</a>
+				<a href="<c:url value="${url}"/>" class="btn btn-primary">Back</a>
+				<a href="#" ng-click="addToCart('${product.productId}')" class="btn btn-success">Order Now</a>
+				<a href= "<spring:url value="/cart" />" class="btn btn-default" >View Cart</a>
+            </p> 			
+				
     	</div>
     	</div>
     </div>
