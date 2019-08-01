@@ -22,13 +22,13 @@
                 
                 <c:forEach items="${products}" var="product">
 				<tr>
-					<td><img alt="Picture" src="resources/img/${ product.productId}.png" style="width:100px; height:100px;"></td>
+					<td><img alt="Picture" src="${pageContext.request.contextPath}/resources/img/${ product.productId}.png" style="width:100px; height:100px;"></td>
 					<td style="vertical-align:middle;">${product.productId}</td>
 					<td style="vertical-align:middle;">${product.productName}</td>
 					<td style="vertical-align:middle;">${product.productDescription}</td>
 					<td style="vertical-align:middle;">${product.productPrice}</td>
 					<td style="vertical-align:middle;">${product.productUnits}</td>
-					<td style="vertical-align:middle;"><a href= "<spring:url value="/productList/viewProduct/${product.productId}" />" >
+					<td style="vertical-align:middle;"><a href= "<spring:url value="/product/viewProduct/${product.productId}" />" >
 					    <span class="glyphicon glyphicon-asterisk"></span></a></td>
 				</tr>
 				</c:forEach>

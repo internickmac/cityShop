@@ -14,7 +14,7 @@
     
     <div class="container">
     	<div class="row">
-    		<form action="${pageContext.request.contextPath}/admin/productInventory/editProduct"
+    		<form action="${pageContext.request.contextPath}/admin/product/editProduct"
     		      method="post" enctype="multipart/form-data">
     		
     			<input type="hidden" name="productId" value="${product.productId}">

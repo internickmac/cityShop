@@ -14,7 +14,7 @@
     
     <div class="container">
     	<div class="row">
-    		<form action="${pageContext.request.contextPath}/admin/productInventory/addProduct"
+    		<form action="${pageContext.request.contextPath}/admin/product/addProduct"
     		      method="post" enctype="multipart/form-data">
     		
 		    	<div class="form-group">
